@@ -6,6 +6,7 @@ namespace DiscogsRandomFive.Services.Implementations
 {
     public class ServiceConsommation : IServiceConsommation
     {
+        /// <summary>Cette methode retourne l'objet CollectionRelease de UrlApi</summary>
         private readonly string UrlApi = "https://api.discogs.com/users/ausamerika/collection/folders/0/releases";
 
         public CollectionRelease GetCollectionRealease()
@@ -13,7 +14,6 @@ namespace DiscogsRandomFive.Services.Implementations
             using (HttpClient client = new HttpClient())
             {
                 client.DefaultRequestHeaders.Add("User-Agent", "Discogs Test App");
-
                 var response = client.GetAsync(UrlApi).Result;
                 response.EnsureSuccessStatusCode();
                 return response.Content.ReadAsAsync<CollectionRelease>().Result;

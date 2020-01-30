@@ -24,8 +24,10 @@ namespace DiscogsRandomFive
         {
             services.AddControllers();
 
-            // Scoped ma3neha melli yetlanca el call lin youfa (DiscogsController)
+            
             services.AddScoped<IServiceConsommation, ServiceConsommation>();
+            services.AddScoped<IServiceTraitement, ServiceTraitement>();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
