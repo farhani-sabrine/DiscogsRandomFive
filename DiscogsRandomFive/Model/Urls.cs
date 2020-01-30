@@ -1,13 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using Newtonsoft.Json;
 
 namespace DiscogsRandomFive.Model
 {
     public class Urls
     {
+        [JsonProperty("last")]
         public string Last { get; set; }
+
+        [JsonProperty("next")]
         public string Next { get; set; }
     }
 }

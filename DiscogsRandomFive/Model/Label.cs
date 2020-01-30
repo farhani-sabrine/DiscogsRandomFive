@@ -1,17 +1,26 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using Newtonsoft.Json;
+
 
 namespace DiscogsRandomFive.Model
 {
     public class Label
     {
+        [JsonProperty("name")]
         public string Name { get; set; }
-        public string Entity_type { get; set; }
+
+        [JsonProperty("entity_type")]
+        public string EntityType { get; set; }
+
+        [JsonProperty("catno")]
         public string Catno { get; set; }
-        public string Resource_url { get; set; }
+
+        [JsonProperty("resource_url")]
+        public string ResourceUrl { get; set; }
+
+        [JsonProperty("id")]
         public int Id { get; set; }
-        public string Entity_type_name { get; set; }
+
+        [JsonProperty("entity_type_name")]
+        public string EntityTypeName { get; set; }
     }
 }

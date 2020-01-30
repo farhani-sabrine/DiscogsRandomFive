@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -7,16 +8,37 @@ namespace DiscogsRandomFive.Model
 {
     public class BasicInformation
     {
+        [JsonProperty("labels")]
         public List<Label> Labels { get; set; }
+
+        [JsonProperty("year")]
         public int Year { get; set; }
-        public string Master_url { get; set; }
+
+        [JsonProperty("master_url")]
+        public string MasterUrl { get; set; }
+
+        [JsonProperty("artists")]
         public List<Artist> Artists { get; set; }
+
+        [JsonProperty("id")]
         public int Id { get; set; }
+
+        [JsonProperty("thumb")]
         public string Thumb { get; set; }
+
+        [JsonProperty("title")]
         public string Title { get; set; }
+
+        [JsonProperty("formats")]
         public List<Format> Formats { get; set; }
-        public string Cover_image { get; set; }
-        public string Resource_url { get; set; }
-        public int Master_id { get; set; }
+
+        [JsonProperty("cover_image")]
+        public string CoverImage { get; set; }
+
+        [JsonProperty("resource_url")]
+        public string ResourceUrl { get; set; }
+
+        [JsonProperty("master_id")]
+        public int MasterId { get; set; }
     }
 }

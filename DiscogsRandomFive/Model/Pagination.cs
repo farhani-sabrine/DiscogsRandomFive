@@ -1,16 +1,23 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using Newtonsoft.Json;
+
 
 namespace DiscogsRandomFive.Model
 {
     public class Pagination
     {
-        public int Per_page { get; set; }
+        [JsonProperty("per_page")]
+        public int PerPage { get; set; }
+
+        [JsonProperty("items")]
         public int Items { get; set; }
+
+        [JsonProperty("page")]
         public int Page { get; set; }
+
+        [JsonProperty("urls")]
         public Urls Urls { get; set; }
+
+        [JsonProperty("pages")]
         public int Pages { get; set; }
     }
 }
