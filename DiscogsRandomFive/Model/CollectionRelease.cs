@@ -9,7 +9,7 @@ namespace DiscogsRandomFive.Model
     public class CollectionRelease
     {
         [JsonProperty("pagination")]
-        public Pagination Pagination { get; set; }
+        public Pagination Paginations { get; set; }
 
         [JsonProperty("releases")]
         public List<Release> Releases { get; set; }
